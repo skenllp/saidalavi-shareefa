@@ -5,40 +5,44 @@
 
 :root {
   /* Color System */
-  --bg-main: #F8F4EE;
-  /* Warm soft ivory page background */
-  --bg-cream: #F3ECE1;
-  /* Deeper warm champagne cream */
+  --bg-main: #36040b;
+  /* Deep Velvet Wine Red / Maroon background matching website countdown section */
+  --bg-cream: #45060e;
+  /* Rich maroon section background variant */
   --bg-card: #FAF6F0;
   /* Pure alabaster card background */
   --bg-card-hover: #FFFFFF;
 
   --text-main: #2B1E1A;
-  /* Deep rosewood charcoal text */
+  /* Deep rosewood charcoal text inside cards */
   --text-muted: #6C594E;
   /* Soft cocoa text */
   --text-light: #948074;
   /* Muted taupe text */
+  --text-on-maroon: #F8F4EE;
+  /* Bright ivory text for sections on maroon background */
+  --text-muted-maroon: #E8D5B0;
+  /* Soft gold text for muted text on maroon background */
 
-  --gold: #C5A059;
+  --gold: #D4AF37;
   /* Rich antique gold */
-  --gold-dark: #8A6B29;
-  /* Deep burnished gold */
-  --gold-bright: #D4AF37;
+  --gold-dark: #C5A059;
+  /* Burnished gold */
+  --gold-bright: #F5D77F;
   /* Bright shimmering gold */
   --gold-light: #E8D5B0;
   /* Pale cream gold */
-  --gold-faint: rgba(197, 160, 89, 0.14);
+  --gold-faint: rgba(245, 215, 127, 0.2);
 
   --burgundy: #7A1F2D;
   /* Luxury deep rose burgundy */
-  --burgundy-dark: #58121D;
+  --burgundy-dark: #36040b;
   --burgundy-soft: rgba(122, 31, 45, 0.08);
 
-  --border-gold: rgba(197, 160, 89, 0.35);
-  --border-gold-strong: rgba(197, 160, 89, 0.65);
-  --shadow-luxury: 0 16px 40px rgba(43, 30, 26, 0.06), 0 4px 12px rgba(197, 160, 89, 0.08);
-  --shadow-hover: 0 24px 50px rgba(43, 30, 26, 0.12), 0 6px 16px rgba(197, 160, 89, 0.15);
+  --border-gold: rgba(212, 175, 55, 0.4);
+  --border-gold-strong: rgba(212, 175, 55, 0.7);
+  --shadow-luxury: 0 16px 40px rgba(0, 0, 0, 0.35), 0 4px 12px rgba(212, 175, 55, 0.2);
+  --shadow-hover: 0 24px 50px rgba(0, 0, 0, 0.45), 0 6px 16px rgba(212, 175, 55, 0.3);
 
   /* Typography */
   --font-arabic: 'Amiri', serif;
@@ -87,7 +91,7 @@ body::before {
   content: '';
   position: fixed;
   inset: 0;
-  background-image: radial-gradient(rgba(197, 160, 89, 0.07) 1px, transparent 1px);
+  background-image: radial-gradient(rgba(212, 175, 55, 0.14) 1px, transparent 1px);
   background-size: 32px 32px;
   pointer-events: none;
   z-index: -1;
@@ -115,8 +119,8 @@ body::before {
   position: fixed;
   inset: 0;
   z-index: 99999;
-  background: #f6e8d7;
-  /* Warm yellowish champagne tone matching the image theme */
+  background: var(--bg-main);
+  /* Light maroon page background */
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   display: flex;
@@ -507,7 +511,7 @@ body::before {
 .quran-arabic {
   font-family: var(--font-arabic);
   font-size: clamp(1.4rem, 4vw, 1.9rem);
-  color: var(--burgundy);
+  color: var(--gold-bright);
   direction: rtl;
   line-height: 1.8;
   margin-bottom: 20px;
@@ -517,7 +521,7 @@ body::before {
   font-family: var(--font-display);
   font-size: clamp(1.15rem, 3.5vw, 1.4rem);
   font-style: italic;
-  color: var(--text-main);
+  color: var(--text-on-maroon);
   line-height: 1.6;
   max-width: 680px;
   margin: 0 auto 24px;
@@ -529,7 +533,7 @@ body::before {
   font-size: 0.72rem;
   font-style: normal;
   letter-spacing: 0.15em;
-  color: var(--gold-dark);
+  color: var(--gold-light);
   margin-top: 10px;
 }
 
@@ -551,7 +555,7 @@ body::before {
 .invitation-text {
   font-family: var(--font-body);
   font-size: clamp(1.1rem, 3vw, 1.3rem);
-  color: var(--text-muted);
+  color: var(--text-muted-maroon);
   max-width: 640px;
   margin: 0 auto;
   line-height: 1.7;
@@ -570,7 +574,7 @@ body::before {
   font-size: clamp(0.65rem, 2vw, 0.75rem);
   letter-spacing: 0.25em;
   text-transform: uppercase;
-  color: var(--gold-dark);
+  color: var(--gold-light);
   font-weight: 600;
   margin-bottom: 8px;
 }
@@ -579,7 +583,7 @@ body::before {
   font-family: var(--font-display);
   font-size: clamp(2.2rem, 6vw, 3.2rem);
   font-weight: 500;
-  color: var(--text-main);
+  color: var(--text-on-maroon);
   line-height: 1.15;
 }
 
@@ -742,7 +746,7 @@ body::before {
   font-size: clamp(0.68rem, 2vw, 0.78rem);
   letter-spacing: 0.25em;
   text-transform: uppercase;
-  color: var(--gold-dark);
+  color: var(--gold-light);
   margin-bottom: 8px;
   font-weight: 500;
 }
@@ -751,7 +755,7 @@ body::before {
   font-family: var(--font-display);
   font-size: clamp(2.4rem, 7vw, 3.8rem);
   font-weight: 400;
-  color: var(--text-main);
+  color: var(--text-on-maroon);
   margin-bottom: clamp(36px, 6vw, 54px);
   letter-spacing: 0.02em;
 }
@@ -1175,7 +1179,7 @@ body::before {
 .footer-names {
   font-family: var(--font-display);
   font-size: 1.8rem;
-  color: var(--text-main);
+  color: var(--text-on-maroon);
   margin-bottom: 8px;
 }
 
@@ -1183,7 +1187,7 @@ body::before {
   font-family: var(--font-body);
   font-size: 1.05rem;
   font-style: italic;
-  color: var(--text-muted);
+  color: var(--text-muted-maroon);
   max-width: 500px;
   margin: 0 auto 12px;
 }
@@ -1192,7 +1196,7 @@ body::before {
   font-family: var(--font-sans);
   font-size: 0.7rem;
   letter-spacing: 0.15em;
-  color: var(--gold-dark);
+  color: var(--gold-bright);
   font-weight: 600;
   margin-bottom: 16px;
 }
@@ -1201,7 +1205,7 @@ body::before {
   font-family: var(--font-eyebrow);
   font-size: 0.65rem;
   letter-spacing: 0.2em;
-  color: var(--burgundy);
+  color: var(--gold-light);
 }
 
 /* ==========================================================================
