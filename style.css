@@ -5,22 +5,33 @@
 
 :root {
   /* Color System */
-  --bg-main: #F8F4EE;          /* Warm soft ivory page background */
-  --bg-cream: #F3ECE1;         /* Deeper warm champagne cream */
-  --bg-card: #FAF6F0;          /* Pure alabaster card background */
+  --bg-main: #F8F4EE;
+  /* Warm soft ivory page background */
+  --bg-cream: #F3ECE1;
+  /* Deeper warm champagne cream */
+  --bg-card: #FAF6F0;
+  /* Pure alabaster card background */
   --bg-card-hover: #FFFFFF;
-  
-  --text-main: #2B1E1A;        /* Deep rosewood charcoal text */
-  --text-muted: #6C594E;       /* Soft cocoa text */
-  --text-light: #948074;       /* Muted taupe text */
 
-  --gold: #C5A059;             /* Rich antique gold */
-  --gold-dark: #8A6B29;        /* Deep burnished gold */
-  --gold-bright: #D4AF37;      /* Bright shimmering gold */
-  --gold-light: #E8D5B0;       /* Pale cream gold */
+  --text-main: #2B1E1A;
+  /* Deep rosewood charcoal text */
+  --text-muted: #6C594E;
+  /* Soft cocoa text */
+  --text-light: #948074;
+  /* Muted taupe text */
+
+  --gold: #C5A059;
+  /* Rich antique gold */
+  --gold-dark: #8A6B29;
+  /* Deep burnished gold */
+  --gold-bright: #D4AF37;
+  /* Bright shimmering gold */
+  --gold-light: #E8D5B0;
+  /* Pale cream gold */
   --gold-faint: rgba(197, 160, 89, 0.14);
 
-  --burgundy: #7A1F2D;         /* Luxury deep rose burgundy */
+  --burgundy: #7A1F2D;
+  /* Luxury deep rose burgundy */
   --burgundy-dark: #58121D;
   --burgundy-soft: rgba(122, 31, 45, 0.08);
 
@@ -42,7 +53,9 @@
 /* ==========================================================================
    RESET & BASE STYLES
    ========================================================================== */
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -102,7 +115,8 @@ body::before {
   position: fixed;
   inset: 0;
   z-index: 99999;
-  background: rgba(243, 235, 222, 0.97); /* Warm yellowish champagne tone matching the image theme */
+  background: #f6e8d7;
+  /* Warm yellowish champagne tone matching the image theme */
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   display: flex;
@@ -144,6 +158,7 @@ body::before {
     opacity: 0;
     transform: translateY(30px) scale(0.96);
   }
+
   to {
     opacity: 1;
     transform: translateY(0) scale(1);
@@ -152,7 +167,8 @@ body::before {
 
 /* Golden Corner Accents for Splash Card */
 .splash-corner {
-  display: none; /* invitation.png already contains luxury gold corners */
+  display: none;
+  /* invitation.png already contains luxury gold corners */
 }
 
 .splash-sprig {
@@ -264,12 +280,15 @@ body::before {
     opacity: 0;
     transform: translateY(0) rotate(0deg) translateX(0);
   }
+
   10% {
     opacity: 0.75;
   }
+
   90% {
     opacity: 0.75;
   }
+
   100% {
     opacity: 0;
     transform: translateY(105vh) rotate(360deg) translateX(80px);
@@ -287,7 +306,7 @@ body::before {
   align-items: center;
   justify-content: center;
   padding: clamp(40px, 8vw, 80px) 20px;
-  
+
   /* Mobile Background Default */
   background-image: url('hero-bg.png');
   background-position: center center;
@@ -314,12 +333,14 @@ body::before {
   width: 100%;
   padding: 24px;
   z-index: 2;
-  margin-top: 60px; /* Moves text safely below top arch border */
+  margin-top: 60px;
+  /* Moves text safely below top arch border */
 }
 
 @media (max-width: 767px) {
   .hero-content-container {
-    margin-top: 75px; /* Ensures Bismillah is well clear of top arch on mobile */
+    margin-top: 75px;
+    /* Ensures Bismillah is well clear of top arch on mobile */
     padding: 16px;
   }
 }
@@ -446,8 +467,17 @@ body::before {
 }
 
 @keyframes scrollPulse {
-  0%, 100% { transform: scaleY(0.4); opacity: 0.3; }
-  50% { transform: scaleY(1); opacity: 1; }
+
+  0%,
+  100% {
+    transform: scaleY(0.4);
+    opacity: 0.3;
+  }
+
+  50% {
+    transform: scaleY(1);
+    opacity: 1;
+  }
 }
 
 .scroll-cue p {
@@ -782,10 +812,29 @@ body::before {
   border-style: solid;
 }
 
-.corner-accent.tl { top: 3px; left: 3px; border-width: 1px 0 0 1px; }
-.corner-accent.tr { top: 3px; right: 3px; border-width: 1px 1px 0 0; }
-.corner-accent.bl { bottom: 3px; left: 3px; border-width: 0 0 1px 1px; }
-.corner-accent.br { bottom: 3px; right: 3px; border-width: 0 1px 1px 0; }
+.corner-accent.tl {
+  top: 3px;
+  left: 3px;
+  border-width: 1px 0 0 1px;
+}
+
+.corner-accent.tr {
+  top: 3px;
+  right: 3px;
+  border-width: 1px 1px 0 0;
+}
+
+.corner-accent.bl {
+  bottom: 3px;
+  left: 3px;
+  border-width: 0 0 1px 1px;
+}
+
+.corner-accent.br {
+  bottom: 3px;
+  right: 3px;
+  border-width: 0 1px 1px 0;
+}
 
 /* ==========================================================================
    CEREMONY & VENUE SECTION (MATCHING REFERENCE IMAGE 2)
@@ -1010,7 +1059,7 @@ body::before {
   overflow: hidden;
   border: 1px solid var(--border-gold);
   margin-bottom: 24px;
-  box-shadow: inset 0 0 10px rgba(0,0,0,0.05);
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.05);
 }
 
 .btn-directions {
@@ -1169,7 +1218,7 @@ body::before {
   border-radius: 50px;
   font-family: var(--font-sans);
   font-size: 0.8rem;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
   z-index: 999999;
   opacity: 0;
   transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), opacity 0.4s ease;
