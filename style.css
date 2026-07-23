@@ -1022,15 +1022,15 @@ body::before {
 .venue-name {
   font-family: var(--font-display);
   font-size: clamp(1.8rem, 5vw, 2.5rem);
-  font-weight: 500;
-  color: var(--text-main);
+  font-weight: 400;
+  color: var(--text-on-maroon);
   line-height: 1.2;
 }
 
 .venue-location-sub {
   font-family: var(--font-body);
   font-size: 1.05rem;
-  color: var(--text-muted);
+  color: var(--text-muted-maroon);
   margin-top: 4px;
 }
 
